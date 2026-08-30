@@ -33,3 +33,17 @@ projects:
         title: "住宅三相配电箱升级"
         description: "为住宅升级三相供电配电箱，更新保护装置并清晰标注各个回路。"
         alt: "位于埃因霍温、带有清晰回路标识的住宅三相配电箱"
+  - id: "geldrop-zaptec-go-2-installation"
+    published: true
+    image: "/assets/images/portfolio/geldrop-zaptec-go-2-installation.webp"
+    location: "Geldrop"
+    date: "2026-04"
+    text:
+      en:
+        title: "Zaptec Go 2 EV charger installation"
+        description: "Installed a wall-mounted Zaptec Go 2 EV charger with a clean surface-mounted cable route for convenient home charging."
+        alt: "Black Zaptec Go 2 EV charger mounted on a brick exterior wall in Geldrop"
+      zh:
+        title: "Zaptec Go 2 家用充电桩安装"
+        description: "在 Geldrop 为住宅安装壁挂式 Zaptec Go 2 电动汽车充电桩，并整齐布置明装供电线路。"
+        alt: "安装在 Geldrop 住宅外墙上的黑色 Zaptec Go 2 电动汽车充电桩"
