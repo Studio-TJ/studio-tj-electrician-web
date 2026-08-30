@@ -3,7 +3,7 @@ plugins:
 - jekyll-remote-theme
 
 title: "TJ Electro"
-description: "Reliable residential electrical services in the Netherlands, with clear communication in English and Chinese."
+description: "Reliable residential electrical services in Almere, with clear communication in English and Chinese."
 lang: en
 url: "https://electro.studiotj.cc"
 baseurl: ""

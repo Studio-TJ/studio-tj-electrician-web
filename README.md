@@ -1,11 +1,11 @@
 # ⚡ TJ Electro  
-### Your English & Chinese speaking electrician in the Netherlands
+### Your English & Chinese speaking electrician in Almere
 
 ---
 
 ## About
 
-Welcome to **TJ Electro** (operated under *Studio TJ*).
+Welcome to **TJ Electro**.
 
 I provide reliable, clean, and professional electrical services for residential projects.  
 Fluent in **English and Chinese**, making communication easy and clear.
@@ -58,11 +58,9 @@ Fluent in **English and Chinese**, making communication easy and clear.
 
 ## Legal
 
-Business name: **Studio TJ**  
-KvK number: 80477917  
-
-Trading as: **TJ Electro**
+- Trade name: **TJ Electro**
+- KvK number: 80477917
 
 ---
 
-*© 2026 Studio TJ. All rights reserved.*
+*© 2026 TJ Electro. All rights reserved.*

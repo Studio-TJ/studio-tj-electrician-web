@@ -128,35 +128,6 @@ h3 {
   margin: 22px auto 44px;
 }
 
-.construction-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  min-height: 38px;
-  padding: 0.45rem 1rem;
-  color: var(--accent-bright);
-  border: 1px solid rgba(202, 255, 86, 0.2);
-  border-radius: 999px;
-  background: rgba(70, 87, 28, 0.16);
-  font: 700 0.72rem/1 var(--mono);
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 5px rgba(202, 255, 86, 0.08), 0 0 18px rgba(202, 255, 86, 0.72);
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.status-code {
-  margin-left: auto;
-  color: var(--faint);
-}
-
 .site-header {
   display: flex;
   align-items: center;
@@ -400,6 +371,13 @@ main {
   margin-bottom: 2rem;
 }
 
+.section-intro {
+  max-width: 700px;
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+}
+
 .section-heading-row {
   display: flex;
   align-items: end;
@@ -413,12 +391,6 @@ main {
   font: 600 0.72rem/1 var(--mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.4fr;
-  gap: 1rem;
 }
 
 .content-card {
@@ -439,43 +411,7 @@ main {
   color: var(--muted);
 }
 
-.principles-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.mini-card {
-  position: relative;
-  min-height: 190px;
-  padding: 1.5rem;
-  overflow: hidden;
-  border: 1px solid var(--line-soft);
-  border-radius: var(--radius-small);
-  background: rgba(255, 255, 255, 0.018);
-}
-
-.mini-card::after {
-  position: absolute;
-  right: -28px;
-  bottom: -44px;
-  width: 110px;
-  height: 110px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  content: "";
-}
-
-.mini-card p {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
-.card-index,
-.service-number,
-.registry-label {
+.service-number {
   display: inline-block;
   margin-bottom: 2.4rem;
   color: var(--accent);
@@ -517,12 +453,6 @@ main {
   font-family: var(--mono);
 }
 
-.legal-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(270px, 0.6fr);
-  gap: 1rem;
-}
-
 .check-list {
   display: grid;
   gap: 0.8rem;
@@ -543,36 +473,6 @@ main {
   color: var(--accent);
   content: "✓";
   font-family: var(--mono);
-}
-
-.registry-card {
-  padding: 1.7rem;
-}
-
-.registry-card dl {
-  margin-bottom: 0;
-}
-
-.registry-card dl div {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--line-soft);
-}
-
-.registry-card dl div:last-child {
-  border-bottom: 0;
-}
-
-.registry-card dt {
-  color: var(--faint);
-  font: 600 0.7rem/1.4 var(--mono);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.registry-card dd {
-  margin: 0.35rem 0 0;
-  color: var(--text);
-  font-weight: 750;
 }
 
 .page-intro {
@@ -782,11 +682,6 @@ a.contact-card:focus-visible {
   text-align: right;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.65; }
-  50% { opacity: 1; }
-}
-
 @keyframes blink {
   0%, 48% { opacity: 1; }
   49%, 100% { opacity: 0; }
@@ -804,8 +699,6 @@ a.contact-card:focus-visible {
 
 @media (max-width: 900px) {
   .hero,
-  .about-grid,
-  .legal-grid,
   .empty-state,
   .contact-layout {
     grid-template-columns: 1fr;
@@ -813,10 +706,6 @@ a.contact-card:focus-visible {
 
   .hero {
     min-height: auto;
-  }
-
-  .system-card {
-    max-width: 480px;
   }
 
   .services-grid {
@@ -832,14 +721,6 @@ a.contact-card:focus-visible {
   .site-shell {
     width: min(100% - 24px, 1180px);
     margin-top: 12px;
-  }
-
-  .construction-bar {
-    padding-inline: 0.8rem;
-  }
-
-  .status-code {
-    display: none;
   }
 
   .site-header {
@@ -861,14 +742,6 @@ a.contact-card:focus-visible {
   .hero {
     padding: 1.5rem;
     border-radius: 16px;
-  }
-
-  .principles-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .mini-card {
-    min-height: 165px;
   }
 
   .section-heading-row,
