@@ -1,0 +1,7 @@
+.DS_Store
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Local visual reference only; do not publish the competitor screenshot.
+image.png

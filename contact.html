@@ -1,0 +1,71 @@
+---
+layout: default
+title: Contact
+description: Contact TJ Electro for residential electrical work in the Netherlands.
+permalink: /contact/
+---
+
+<section class="page-intro">
+  <p class="eyebrow"><span aria-hidden="true">03 //</span> Direct contact</p>
+  <h1>Let’s talk<span class="accent-dot">.</span></h1>
+  <p>For a faster estimate, include a short description and clear photos or video of the situation.</p>
+</section>
+
+<section class="contact-layout">
+  <div class="contact-list">
+    <a class="contact-card panel" href="mailto:{{ site.email }}">
+      <span class="contact-icon" aria-hidden="true">@</span>
+      <span class="contact-copy">
+        <small>Email</small>
+        <strong>{{ site.email }}</strong>
+      </span>
+      <span class="contact-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    {% if site.phone != '' %}
+      <a class="contact-card panel" href="tel:{{ site.phone | remove: ' ' }}">
+        <span class="contact-icon" aria-hidden="true">TEL</span>
+        <span class="contact-copy">
+          <small>Phone</small>
+          <strong>{{ site.phone }}</strong>
+        </span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+    {% endif %}
+
+    {% if site.whatsapp != '' %}
+      <a class="contact-card panel" href="https://wa.me/{{ site.whatsapp | remove: '+' | remove: ' ' }}">
+        <span class="contact-icon" aria-hidden="true">WA</span>
+        <span class="contact-copy">
+          <small>WhatsApp</small>
+          <strong>{{ site.whatsapp }}</strong>
+        </span>
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </a>
+    {% endif %}
+
+    {% if site.wechat != '' %}
+      <div class="contact-card panel">
+        <span class="contact-icon" aria-hidden="true">WX</span>
+        <span class="contact-copy">
+          <small>WeChat</small>
+          <strong>{{ site.wechat }}</strong>
+        </span>
+      </div>
+    {% endif %}
+  </div>
+
+  <aside class="panel contact-aside">
+    <div class="signal" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="eyebrow">Connection status</p>
+    <h2>Available for enquiries</h2>
+    <p>
+      Phone, WhatsApp and WeChat details will be added while this website is being completed.
+      Email is available now.
+    </p>
+    <div class="response-note">
+      <span aria-hidden="true">⚡</span>
+      <p><strong>Estimation tip</strong><br>Photos or video help identify the likely scope before a visit.</p>
+    </div>
+  </aside>
+</section>
