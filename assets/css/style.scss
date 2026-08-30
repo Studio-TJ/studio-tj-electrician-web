@@ -143,16 +143,12 @@ h3 {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  place-items: center;
-  color: #0a0d09;
-  background: var(--accent);
-  border-radius: 11px 4px 11px 4px;
-  box-shadow: 0 0 28px rgba(202, 255, 86, 0.17);
-  font-size: 1.25rem;
+.brand-logo {
+  display: block;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 12px rgba(183, 255, 50, 0.2));
 }
 
 .brand-copy {
@@ -574,6 +570,12 @@ a.contact-card:focus-visible {
   font: 800 0.76rem/1 var(--mono);
 }
 
+.contact-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
 .contact-copy {
   display: grid;
   min-width: 0;
@@ -792,6 +794,11 @@ a.contact-card:focus-visible {
     flex-basis: 44px;
     width: 44px;
     height: 44px;
+  }
+
+  .contact-icon svg {
+    width: 23px;
+    height: 23px;
   }
 
   .footer-meta {

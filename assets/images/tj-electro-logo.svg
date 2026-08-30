@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 70 390 390">
+  <title>TJ Electro icon</title>
+  <g fill="none" stroke="#B7FF32" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+    <!-- T -->
+    <path d="M105 120 H245" />
+    <path d="M175 120 V245" />
+    <!-- J / enclosing form -->
+    <path d="M300 120 H365 V340
+             C365 384 339 408 297 408
+             H180
+             C139 408 115 384 115 343
+             V280" />
+  </g>
+  <!-- lightning -->
+  <path fill="#B7FF32"
+        d="M282 166
+           L205 263
+           H252
+           L219 355
+           L319 238
+           H269
+           Z"/>
+</svg>
