@@ -5,16 +5,16 @@ email:
   address: "info@studiotj.cc"
 
 phone:
-  display: ""
-  number: ""
+  display: "+31 6 46166267"
+  number: "31646166267"
 
 # WhatsApp number must use international format with digits only, for example:
 # display: "+31 6 12345678"
 # number: "31612345678"
 whatsapp:
-  display: ""
-  number: ""
+  display: "+31 6 46166267"
+  number: "31646166267"
 
 wechat:
-  id: ""
+  id: "james77676166"
   qr_image: ""
