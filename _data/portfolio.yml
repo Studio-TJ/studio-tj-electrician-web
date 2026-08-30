@@ -47,3 +47,17 @@ projects:
         title: "Zaptec Go 2 家用充电桩安装"
         description: "在 Geldrop 为住宅安装壁挂式 Zaptec Go 2 电动汽车充电桩，并整齐布置明装供电线路。"
         alt: "安装在 Geldrop 住宅外墙上的黑色 Zaptec Go 2 电动汽车充电桩"
+  - id: "tilburg-plasterboard-double-socket-installation"
+    published: true
+    image: "/assets/images/portfolio/tilburg-plasterboard-double-socket-installation.webp"
+    location: "Tilburg"
+    date: "2026-03"
+    text:
+      en:
+        title: "Additional double socket installation"
+        description: "Opened the plasterboard wall to extend the wiring and install a new double socket, ready for the wall to be finished."
+        alt: "New double electrical socket installed in an opened plasterboard wall in Tilburg"
+      zh:
+        title: "石膏板墙双联插座增设"
+        description: "在客户的石膏板墙内开孔延伸线路并增设双联插座，墙面随后可继续修补和饰面。"
+        alt: "蒂尔堡石膏板墙上新安装的双联插座及线路开孔"
