@@ -303,17 +303,6 @@ main {
   box-shadow: 0 0 28px rgba(202, 255, 86, 0.11);
 }
 
-.button-ghost {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.025);
-}
-
-.button-ghost:hover,
-.button-ghost:focus-visible {
-  border-color: var(--line);
-  background: rgba(202, 255, 86, 0.05);
-}
-
 .system-card {
   padding: 1.2rem;
   border: 1px solid var(--line);
@@ -607,6 +596,37 @@ a.contact-card:focus-visible {
   margin-left: auto;
   color: var(--accent);
   font-size: 1.3rem;
+}
+
+.copy-button {
+  margin-left: auto;
+  padding: 0.65rem 0.8rem;
+  color: var(--accent-bright);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(202, 255, 86, 0.05);
+  font: 700 0.7rem/1 var(--mono);
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+  border-color: rgba(202, 255, 86, 0.42);
+  background: rgba(202, 255, 86, 0.1);
+}
+
+.wechat-qr {
+  display: grid;
+  padding: 1.25rem;
+  place-items: center;
+}
+
+.wechat-qr img {
+  display: block;
+  width: min(100%, 260px);
+  height: auto;
+  border-radius: var(--radius-small);
 }
 
 .contact-aside {

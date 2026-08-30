@@ -5,67 +5,74 @@ description: Contact TJ Electro for residential electrical work in Almere.
 permalink: /contact/
 ---
 
+{% assign contact = site.data.contact %}
+
 <section class="page-intro">
   <p class="eyebrow"><span aria-hidden="true">03 //</span> Direct contact</p>
-  <h1>Let’s talk<span class="accent-dot">.</span></h1>
-  <p>For a faster estimate, include a short description and clear photos or video of the situation.</p>
+  <h1>Contact me<span class="accent-dot">.</span></h1>
+  <p>Tell me briefly what you need and include a few clear photos or a short video if possible.</p>
 </section>
 
 <section class="contact-layout">
   <div class="contact-list">
-    <a class="contact-card panel" href="mailto:{{ site.email }}">
+    <a class="contact-card panel" href="mailto:{{ contact.email.address }}">
       <span class="contact-icon" aria-hidden="true">@</span>
       <span class="contact-copy">
         <small>Email</small>
-        <strong>{{ site.email }}</strong>
+        <strong>{{ contact.email.address }}</strong>
       </span>
       <span class="contact-arrow" aria-hidden="true">↗</span>
     </a>
 
-    {% if site.phone != '' %}
-      <a class="contact-card panel" href="tel:{{ site.phone | remove: ' ' }}">
+    {% if contact.phone.display != '' and contact.phone.number != '' %}
+      <a class="contact-card panel" href="tel:{{ contact.phone.number }}">
         <span class="contact-icon" aria-hidden="true">TEL</span>
         <span class="contact-copy">
           <small>Phone</small>
-          <strong>{{ site.phone }}</strong>
+          <strong>{{ contact.phone.display }}</strong>
         </span>
         <span class="contact-arrow" aria-hidden="true">↗</span>
       </a>
     {% endif %}
 
-    {% if site.whatsapp != '' %}
-      <a class="contact-card panel" href="https://wa.me/{{ site.whatsapp | remove: '+' | remove: ' ' }}">
+    {% if contact.whatsapp.display != '' and contact.whatsapp.number != '' %}
+      <a class="contact-card panel" href="https://wa.me/{{ contact.whatsapp.number }}">
         <span class="contact-icon" aria-hidden="true">WA</span>
         <span class="contact-copy">
           <small>WhatsApp</small>
-          <strong>{{ site.whatsapp }}</strong>
+          <strong>{{ contact.whatsapp.display }}</strong>
         </span>
         <span class="contact-arrow" aria-hidden="true">↗</span>
       </a>
     {% endif %}
 
-    {% if site.wechat != '' %}
+    {% if contact.wechat.id != '' %}
       <div class="contact-card panel">
         <span class="contact-icon" aria-hidden="true">WX</span>
         <span class="contact-copy">
           <small>WeChat</small>
-          <strong>{{ site.wechat }}</strong>
+          <strong>{{ contact.wechat.id }}</strong>
         </span>
+        <button class="copy-button" type="button" data-copy="{{ contact.wechat.id | escape }}" aria-label="Copy WeChat ID">Copy</button>
       </div>
+      {% if contact.wechat.qr_image != '' %}
+        <div class="wechat-qr panel">
+          <img src="{{ contact.wechat.qr_image | relative_url }}" alt="TJ Electro WeChat QR code">
+        </div>
+      {% endif %}
     {% endif %}
   </div>
 
   <aside class="panel contact-aside">
     <div class="signal" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p class="eyebrow">Connection status</p>
-    <h2>Available for enquiries</h2>
-    <p>
-      Email is currently the best way to reach TJ Electro. Phone, WhatsApp and WeChat
-      details will be added here when available.
-    </p>
+    <p class="eyebrow">A quick note</p>
+    <h2>Photos help</h2>
+    <p>A few clear photos or a short video help me understand the situation before I visit.</p>
     <div class="response-note">
       <span aria-hidden="true">⚡</span>
-      <p><strong>Estimation tip</strong><br>Photos or video help identify the likely scope before a visit.</p>
+      <p><strong>What to include</strong><br>Your location, a short description and when you would like the work done.</p>
     </div>
   </aside>
 </section>
+
+<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>

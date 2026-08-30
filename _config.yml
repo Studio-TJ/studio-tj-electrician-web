@@ -7,13 +7,3 @@ description: "Reliable residential electrical services in Almere, with clear com
 lang: en
 url: "https://electro.studiotj.cc"
 baseurl: ""
-
-# Contact details. Add the remaining values when they are ready; empty values
-# stay hidden on the contact page.
-email: "info@studiotj.cc"
-phone: ""
-whatsapp: ""
-wechat: ""
-
-exclude:
-  - image.png

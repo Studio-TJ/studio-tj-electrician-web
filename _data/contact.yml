@@ -1,0 +1,20 @@
+# Public contact information used by contact.html.
+# Leave both display and number empty to hide an optional contact method.
+
+email:
+  address: "info@studiotj.cc"
+
+phone:
+  display: ""
+  number: ""
+
+# WhatsApp number must use international format with digits only, for example:
+# display: "+31 6 12345678"
+# number: "31612345678"
+whatsapp:
+  display: ""
+  number: ""
+
+wechat:
+  id: ""
+  qr_image: ""
