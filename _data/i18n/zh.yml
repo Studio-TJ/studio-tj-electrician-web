@@ -1,0 +1,12 @@
+portfolio:
+  eyebrow: "部分案例"
+  heading: "项目案例"
+  intro: "这里会展示一些已经完成的电气安装和改造项目。"
+  grid_label: "已完成的电气项目"
+  location_label: "地点"
+  date_label: "完成时间"
+  empty:
+    eyebrow: "案例状态"
+    heading: "项目案例库"
+    description: "项目照片会陆续添加到这里。你也可以先把自己的需求和现场照片发给我。"
+    action: "联系我讨论项目"

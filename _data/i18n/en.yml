@@ -1,0 +1,12 @@
+portfolio:
+  eyebrow: "Selected work"
+  heading: "Portfolio"
+  intro: "A selection of completed electrical projects and installation details."
+  grid_label: "Completed electrical projects"
+  location_label: "Location"
+  date_label: "Completed"
+  empty:
+    eyebrow: "Archive status"
+    heading: "Project archive"
+    description: "Project photographs will be added here over time. In the meantime, feel free to get in touch with a description or photos of your own electrical project."
+    action: "Discuss a project"

@@ -5,5 +5,19 @@ plugins:
 title: "TJ Electro"
 description: "Reliable residential electrical services in Almere, with clear communication in English and Chinese."
 lang: en
+default_locale: en
+locales:
+  en:
+    label: "English"
+    enabled: true
+    path_prefix: ""
+  zh:
+    label: "中文"
+    enabled: false
+    path_prefix: "/zh"
+  nl:
+    label: "Nederlands"
+    enabled: false
+    path_prefix: "/nl"
 url: "https://electro.studiotj.cc"
 baseurl: ""

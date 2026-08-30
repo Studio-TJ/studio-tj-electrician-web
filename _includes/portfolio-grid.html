@@ -1,0 +1,32 @@
+<section class="portfolio-grid" aria-label="{{ include.strings.grid_label | escape }}">
+  {% assign locale = include.locale %}
+  {% for project in include.projects %}
+    {% assign project_text = project.text[locale] | default: project.text.en %}
+    <article class="portfolio-card panel">
+      <div class="portfolio-image">
+        <img
+          src="{{ project.image | relative_url }}"
+          alt="{{ project_text.alt | default: project_text.title | escape }}"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+      <div class="portfolio-card-copy">
+        {% if project.location or project.date %}
+          <div class="portfolio-meta">
+            {% if project.location %}
+              <span>{{ include.strings.location_label }} // {{ project.location | escape }}</span>
+            {% endif %}
+            {% if project.date %}
+              <time datetime="{{ project.date }}">{{ include.strings.date_label }} // {{ project.date }}</time>
+            {% endif %}
+          </div>
+        {% endif %}
+        <h2>{{ project_text.title | escape }}</h2>
+        {% if project_text.description %}
+          <p>{{ project_text.description | escape }}</p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</section>

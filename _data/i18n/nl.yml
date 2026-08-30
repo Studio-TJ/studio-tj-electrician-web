@@ -1,0 +1,12 @@
+portfolio:
+  eyebrow: "Geselecteerd werk"
+  heading: "Projecten"
+  intro: "Een selectie van afgeronde elektrotechnische projecten en installatiedetails."
+  grid_label: "Afgeronde elektrotechnische projecten"
+  location_label: "Locatie"
+  date_label: "Uitgevoerd"
+  empty:
+    eyebrow: "Archiefstatus"
+    heading: "Projectarchief"
+    description: "Projectfoto's worden hier geleidelijk toegevoegd. Neem gerust contact op met een omschrijving of foto's van uw eigen project."
+    action: "Bespreek een project"
