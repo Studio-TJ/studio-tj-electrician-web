@@ -18,9 +18,9 @@ home:
   hero:
     eyebrow: "TJ Electro"
     title_primary: "Almere 本地电工"
-    title_accent: "主要服务 Randstad，其他地区也可联系。"
+    title_accent: "荷兰各地项目均可联系。"
     coverage: ""
-    lead: "家里的电气安装、维修和线路升级，我都可以帮忙。支持 <strong>中文</strong> 和 <strong>英语</strong> 沟通，需求和细节都能说清楚。"
+    lead: "主要承接住宅电气安装、维修和改造，以及家庭储能、充电桩等新能源项目。商业场所的电气项目也可根据规模和施工内容具体沟通。支持 <strong>中文</strong> 和 <strong>英语</strong> 沟通。"
     action: "联系我"
     system_label: "服务概览"
     system_header: "本地电工 / ALMERE"
@@ -29,9 +29,9 @@ home:
     system_languages: "中文 / 英语"
   services:
     eyebrow: "服务范围"
-    heading: "家里这些用电问题，我可以帮忙"
-    intro: "从装灯、加插座，到排查故障、升级配电箱，我会先把情况和方案说明白，再认真把活做好。"
-    note: "住宅电气 · 安装检修 · 新能源项目"
+    heading: "我可以提供的服务"
+    intro: "以住宅项目为主，包括日常维修、电气改造、配电箱升级及新能源设备安装。商业项目也可以根据实际情况联系沟通。"
+    note: "住宅电气 · 新能源项目 · 商业项目可咨询"
     cards:
       - number: "01"
         title: "安装和改造"

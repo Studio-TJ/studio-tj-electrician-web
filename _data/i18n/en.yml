@@ -20,7 +20,7 @@ home:
     title_primary: "Your local electrician"
     title_accent: "in Almere."
     coverage: "Based in Almere · Contact me for projects across the Netherlands."
-    lead: "I provide reliable electrical installation, repairs and upgrades for homes — with clear communication in <strong>English</strong> and <strong>中文</strong>."
+    lead: "I mainly take on residential electrical installation, repairs and upgrades, as well as home battery and EV charger projects. Commercial electrical work can also be discussed depending on its size and scope. I communicate clearly in <strong>English</strong> and <strong>中文</strong>."
     action: "Contact me"
     system_label: "Service overview"
     system_header: "LOCAL ELECTRICIAN / ALMERE"
@@ -30,8 +30,8 @@ home:
   services:
     eyebrow: "Services"
     heading: "What I can help with"
-    intro: "From lighting and extra sockets to fault diagnosis, distribution board upgrades and home energy systems, I explain the options clearly and carry out the work with care."
-    note: "Residential · installation & repair · home energy"
+    intro: "My work focuses on residential projects, including repairs, electrical upgrades, distribution boards and home energy equipment. Commercial projects can also be discussed case by case."
+    note: "Residential · home energy · commercial enquiries"
     cards:
       - number: "01"
         title: "Installation & renovation"
