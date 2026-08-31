@@ -10,7 +10,7 @@ site:
   copyright: "© 2026 TJ Electro"
 
 nav:
-  home: "Company"
+  home: "Services"
   portfolio: "Portfolio"
   contact: "Contact"
 
@@ -23,44 +23,50 @@ home:
     lead: "I provide reliable electrical installation, repairs and upgrades for homes — with clear communication in <strong>English</strong> and <strong>中文</strong>."
     action: "Contact me"
     system_label: "Service overview"
-    system_header: "INDEPENDENT / ALMERE"
+    system_header: "LOCAL ELECTRICIAN / ALMERE"
     system_state: "HOW I CAN HELP"
     system_services: "Installation · Repairs · Upgrades"
     system_languages: "English / 中文"
   services:
-    eyebrow: "Company"
+    eyebrow: "Services"
     heading: "What I can help with"
-    intro: "I help homeowners with electrical installation, fault diagnosis and upgrades. I focus on clear communication, careful work and practical solutions."
-    note: "Residential · upgrade · diagnose"
+    intro: "From lighting and extra sockets to fault diagnosis, distribution board upgrades and home energy systems, I explain the options clearly and carry out the work with care."
+    note: "Residential · installation & repair · home energy"
     cards:
       - number: "01"
-        title: "Install & upgrade"
+        title: "Installation & renovation"
         items:
           - "Lighting and LED fixtures"
-          - "Sockets and switches"
-          - "Small renovation work"
+          - "New or replacement sockets and switches"
+          - "Small electrical renovation work"
       - number: "02"
-        title: "Power & safety"
+        title: "Circuits & safety"
         items:
           - "Fault diagnosis"
-          - "Distribution board upgrades"
-          - "New circuits and groups"
+          - "Distribution board replacement and upgrades"
+          - "New wiring and circuits"
       - number: "03"
-        title: "Smart energy"
+        title: "Battery storage & EV charging"
         items:
-          - "EV charger installation"
-          - "Home battery systems"
-          - "Smart home and security"
+          - "Home battery installation"
+          - "Energy storage system setup and upgrades"
+          - "Home EV charger installation"
+      - number: "04"
+        title: "Smart home & security"
+        items:
+          - "Smart home device installation"
+          - "Doorbells, cameras and security devices"
+          - "Sensors and automation controls"
   terms:
     eyebrow: "Service notes"
     heading: "Terms at a glance"
     items:
       - "Quotes are based on the information provided and may change with site conditions."
-      - "Small works may be charged at an hourly rate."
+      - "Small repairs and minor works are billed by the hour; larger jobs with a clearly defined scope are priced per project."
       - "Materials are charged separately unless stated otherwise."
       - "Installation warranty: 12 months."
       - "Product warranty follows the manufacturer."
-      - "Call-out or inspection may be charged when no work is carried out."
+      - "If no work is carried out after a site visit, the applicable call-out or inspection fee will be charged."
 
 portfolio:
   eyebrow: "Selected work"
