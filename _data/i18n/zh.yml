@@ -1,12 +1,99 @@
+site:
+  skip_to_content: "跳到主要内容"
+  home_label: "TJ Electro 首页"
+  brand_subtitle: "住宅电工服务"
+  navigation_label: "主导航"
+  language_switch_label: "查看本页英文版本"
+  language_switch_text: "EN"
+  footer_service: "以 Almere 为基地，为荷兰各地提供住宅电气服务。"
+  registration: "TJ Electro · KvK 80477917"
+  copyright: "© 2026 TJ Electro"
+
+nav:
+  home: "公司介绍"
+  portfolio: "项目案例"
+  contact: "联系方式"
+
+home:
+  hero:
+    eyebrow: "TJ Electro"
+    title_primary: "您身边的电工"
+    title_accent: "常驻 Almere。"
+    coverage: "以 Almere 为基地 · 荷兰全境的项目都欢迎联系。"
+    lead: "我为荷兰住宅提供可靠的电气安装、维修和升级服务，并可使用 <strong>中文</strong> 或 <strong>English</strong> 清晰沟通。"
+    action: "联系我"
+    system_label: "服务概览"
+    system_header: "独立电工 / ALMERE"
+    system_state: "我能提供的服务"
+    system_services: "安装 · 维修 · 升级"
+    system_languages: "中文 / English"
+  services:
+    eyebrow: "公司介绍"
+    heading: "我可以帮您做什么"
+    intro: "我为住宅客户提供电气安装、故障排查和升级服务，注重清楚沟通、细致施工和实用方案。"
+    note: "住宅 · 升级 · 故障排查"
+    cards:
+      - number: "01"
+        title: "安装与升级"
+        items:
+          - "灯具和 LED 照明"
+          - "插座和开关"
+          - "小型装修电气工程"
+      - number: "02"
+        title: "用电与安全"
+        items:
+          - "电气故障排查"
+          - "配电箱升级"
+          - "新增电路和分组"
+      - number: "03"
+        title: "智能能源"
+        items:
+          - "电动汽车充电桩安装"
+          - "家庭储能系统"
+          - "智能家居和安防"
+  terms:
+    eyebrow: "服务说明"
+    heading: "基本条款"
+    items:
+      - "报价基于客户提供的信息；如现场情况不同，价格可能调整。"
+      - "小型工程可能按小时计费。"
+      - "除非另有说明，材料费用单独计算。"
+      - "安装工程保修期为 12 个月。"
+      - "产品保修按照制造商的规定执行。"
+      - "如果上门后没有进行施工，可能会收取上门或检查费用。"
+
 portfolio:
   eyebrow: "部分案例"
   heading: "项目案例"
-  intro: "这里会展示一些已经完成的电气安装和改造项目。"
+  intro: "这里展示一些已经完成的电气安装和改造项目。"
   grid_label: "已完成的电气项目"
   location_label: "地点"
   date_label: "完成时间"
   empty:
+    visual_label: "等待图片"
     eyebrow: "案例状态"
     heading: "项目案例库"
-    description: "项目照片会陆续添加到这里。你也可以先把自己的需求和现场照片发给我。"
+    description: "项目照片会陆续添加到这里。您也可以先把自己的需求和现场照片发给我。"
     action: "联系我讨论项目"
+
+contact:
+  eyebrow: "直接联系"
+  heading: "联系我"
+  intro: "请简单说明您的需求；如果方便，也请附上几张清晰照片或一段短视频。"
+  labels:
+    email: "电子邮箱"
+    phone: "电话"
+    whatsapp: "WhatsApp"
+    wechat: "微信"
+  copy:
+    action: "复制"
+    aria_label: "复制微信号"
+    success: "已复制"
+    error: "复制失败"
+  wechat_qr_alt: "TJ Electro 微信二维码"
+  aside:
+    eyebrow: "小提示"
+    heading: "照片会很有帮助"
+    description: "几张清晰的照片或一段短视频，可以帮助我在上门前了解现场情况。"
+    details_heading: "建议提供"
+    details: "所在位置、简要需求，以及希望完成施工的时间。"

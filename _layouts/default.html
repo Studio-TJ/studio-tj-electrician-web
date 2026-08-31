@@ -1,49 +1,90 @@
+{% assign locale = page.lang | default: site.default_locale | default: site.lang | default: 'en' %}
+{% assign strings = site.data.i18n[locale] | default: site.data.i18n.en %}
+{% assign current_routes = site.data.routes[page.translation_key] %}
+{% assign home_routes = site.data.routes.home %}
+{% assign portfolio_routes = site.data.routes.portfolio %}
+{% assign contact_routes = site.data.routes.contact %}
+{% assign home_url = home_routes[locale] | default: home_routes.en %}
+{% assign portfolio_url = portfolio_routes[locale] | default: portfolio_routes.en %}
+{% assign contact_url = contact_routes[locale] | default: contact_routes.en %}
+{% if locale == 'zh' %}
+  {% assign alternate_locale = 'en' %}
+{% else %}
+  {% assign alternate_locale = 'zh' %}
+{% endif %}
+{% assign alternate_url = current_routes[alternate_locale] %}
+{% if page.translation_key == 'home' %}
+  {% assign document_title = site.title %}
+{% else %}
+  {% capture document_title %}{{ page.title }} · {{ site.title }}{% endcapture %}
+{% endif %}
+{% assign document_description = page.description | default: site.description %}
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ locale }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.url == '/' %}
-      <title>{{ site.title }}</title>
-    {% else %}
-      <title>{{ page.title }} · {{ site.title }}</title>
-    {% endif %}
-    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <title>{{ document_title }}</title>
+    <meta name="description" content="{{ document_description | escape }}">
     <meta name="theme-color" content="#0b0e0a">
     <meta name="color-scheme" content="dark">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
+    {% if current_routes %}
+      <link rel="alternate" hreflang="en" href="{{ current_routes.en | absolute_url }}">
+      <link rel="alternate" hreflang="zh" href="{{ current_routes.zh | absolute_url }}">
+      <link rel="alternate" hreflang="x-default" href="{{ current_routes.en | absolute_url }}">
+    {% endif %}
     <link rel="icon" type="image/svg+xml" sizes="any" href="{{ '/assets/images/tj-electro-logo.svg' | relative_url }}">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}">
-    <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+    <meta property="og:title" content="{{ document_title | escape }}">
+    <meta property="og:description" content="{{ document_description | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% if page.url == '/' %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
+    <meta name="twitter:title" content="{{ document_title | escape }}">
+    <meta name="twitter:description" content="{{ document_description | escape }}">
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
 
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{{ strings.site.skip_to_content }}</a>
 
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="TJ Electro home">
+        <a class="brand" href="{{ home_url | relative_url }}" aria-label="{{ strings.site.home_label | escape }}">
           <img class="brand-logo" src="{{ '/assets/images/tj-electro-logo.svg' | relative_url }}" width="48" height="48" alt="">
           <span class="brand-copy">
             <strong>TJ ELECTRO</strong>
-            <small>Residential electrician</small>
+            <small>{{ strings.site.brand_subtitle }}</small>
           </span>
         </a>
 
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="is-active" aria-current="page"{% endif %}>Company</a>
-          <a href="{{ '/portfolio/' | relative_url }}"{% if page.url == '/portfolio/' %} class="is-active" aria-current="page"{% endif %}>Portfolio</a>
-          <a href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} class="is-active" aria-current="page"{% endif %}>Contact</a>
-        </nav>
+        <div class="header-actions">
+          <nav class="site-nav" aria-label="{{ strings.site.navigation_label | escape }}">
+            <a href="{{ home_url | relative_url }}"{% if page.translation_key == 'home' %} class="is-active" aria-current="page"{% endif %}>{{ strings.nav.home }}</a>
+            <a href="{{ portfolio_url | relative_url }}"{% if page.translation_key == 'portfolio' %} class="is-active" aria-current="page"{% endif %}>{{ strings.nav.portfolio }}</a>
+            <a href="{{ contact_url | relative_url }}"{% if page.translation_key == 'contact' %} class="is-active" aria-current="page"{% endif %}>{{ strings.nav.contact }}</a>
+          </nav>
+
+          {% if alternate_url %}
+            <a
+              class="language-switch"
+              href="{{ alternate_url | relative_url }}"
+              hreflang="{{ alternate_locale }}"
+              lang="{{ alternate_locale }}"
+              aria-label="{{ strings.site.language_switch_label | escape }}"
+              title="{{ strings.site.language_switch_label | escape }}"
+            >
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                <circle cx="8" cy="8" r="6.25"/>
+                <path d="M1.75 8h12.5M8 1.75c1.55 1.7 2.35 3.78 2.35 6.25S9.55 12.55 8 14.25M8 1.75C6.45 3.45 5.65 5.53 5.65 8s.8 4.55 2.35 6.25"/>
+              </svg>
+              <span>{{ strings.site.language_switch_text }}</span>
+            </a>
+          {% endif %}
+        </div>
       </header>
 
       <main id="main-content">
@@ -53,11 +94,11 @@
       <footer class="site-footer">
         <div>
           <strong>TJ Electro</strong>
-          <span>Residential electrical services in Almere.</span>
+          <span>{{ strings.site.footer_service }}</span>
         </div>
         <div class="footer-meta">
-          <span>TJ Electro · KvK 80477917</span>
-          <span>© 2026 TJ Electro</span>
+          <span>{{ strings.site.registration }}</span>
+          <span>{{ strings.site.copyright }}</span>
         </div>
       </footer>
     </div>

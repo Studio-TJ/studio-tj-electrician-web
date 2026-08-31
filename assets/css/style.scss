@@ -168,6 +168,12 @@ h3 {
   letter-spacing: 0.08em;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -193,6 +199,40 @@ h3 {
 .site-nav a.is-active {
   color: var(--accent-bright);
   background: rgba(202, 255, 86, 0.09);
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42rem;
+  min-height: 42px;
+  padding: 0.58rem 0.78rem;
+  color: var(--accent-bright);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(202, 255, 86, 0.045);
+  font: 750 0.72rem/1 var(--mono);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.language-switch:hover,
+.language-switch:focus-visible {
+  color: var(--accent);
+  border-color: rgba(202, 255, 86, 0.38);
+  background: rgba(202, 255, 86, 0.1);
+}
+
+.language-switch svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.15;
 }
 
 main {
@@ -241,6 +281,14 @@ main {
 .accent-dot {
   color: var(--accent);
   text-shadow: 0 0 32px rgba(202, 255, 86, 0.18);
+}
+
+.hero-coverage {
+  margin: -0.45rem 0 1.35rem;
+  color: var(--accent-warm);
+  font: 650 0.72rem/1.5 var(--mono);
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
 }
 
 .hero-lead {
@@ -806,13 +854,27 @@ a.contact-card:focus-visible {
     padding-block: 22px 26px;
   }
 
-  .site-nav {
+  .header-actions {
     width: 100%;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    flex: 1;
+    min-width: 0;
+    width: auto;
   }
 
   .site-nav a {
     flex: 1;
+    padding-inline: 0.65rem;
     text-align: center;
+  }
+
+  .language-switch {
+    flex: 0 0 auto;
+    min-width: 54px;
+    padding-inline: 0.7rem;
   }
 
   .hero {

@@ -1,0 +1,29 @@
+{% assign locale = page.lang | default: site.default_locale | default: site.lang %}
+{% assign strings = site.data.i18n[locale] | default: site.data.i18n.en %}
+{% assign portfolio = strings.portfolio %}
+{% assign projects = site.data.portfolio.projects | where: "published", true %}
+{% assign contact_routes = site.data.routes.contact %}
+{% assign contact_url = contact_routes[locale] | default: contact_routes.en %}
+
+<section class="page-intro">
+  <p class="eyebrow"><span aria-hidden="true">02 //</span> {{ portfolio.eyebrow }}</p>
+  <h1>{{ portfolio.heading }}<span class="accent-dot">.</span></h1>
+  <p>{{ portfolio.intro }}</p>
+</section>
+
+{% if projects != empty %}
+  {% include portfolio-grid.html projects=projects locale=locale strings=portfolio %}
+{% else %}
+  <section class="panel empty-state" aria-labelledby="portfolio-status">
+    <div class="empty-visual" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <div>{{ portfolio.empty.visual_label }}</div>
+    </div>
+    <div>
+      <p class="eyebrow">{{ portfolio.empty.eyebrow }}</p>
+      <h2 id="portfolio-status">{{ portfolio.empty.heading }}</h2>
+      <p>{{ portfolio.empty.description }}</p>
+      <a class="button button-primary" href="{{ contact_url | relative_url }}">{{ portfolio.empty.action }} <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+{% endif %}

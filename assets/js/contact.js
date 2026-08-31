@@ -4,9 +4,9 @@ document.querySelectorAll("[data-copy]").forEach((button) => {
 
     try {
       await navigator.clipboard.writeText(button.dataset.copy);
-      button.textContent = "Copied";
+      button.textContent = button.dataset.copySuccess;
     } catch (_error) {
-      button.textContent = "Copy failed";
+      button.textContent = button.dataset.copyError;
     }
 
     window.setTimeout(() => {

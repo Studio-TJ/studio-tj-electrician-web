@@ -92,6 +92,16 @@ translations automatically fall back to English.
 
 ---
 
+## Translations
+
+Shared website text lives in `_data/i18n/en.yml` and `_data/i18n/zh.yml`.
+English uses the existing root URLs; Chinese uses the matching `/zh/` URLs.
+The language switcher uses `_data/routes.yml` to move between the same page in
+both languages. When adding a visible interface string, add the same key to both
+language files. Portfolio project translations remain in `_data/portfolio.yml`.
+
+---
+
 ## Contact
 
 📧 Email: info@studiotj.cc

@@ -1,0 +1,64 @@
+{% assign locale = page.lang | default: site.default_locale | default: site.lang %}
+{% assign strings = site.data.i18n[locale] | default: site.data.i18n.en %}
+{% assign home = strings.home %}
+{% assign contact_routes = site.data.routes.contact %}
+{% assign contact_url = contact_routes[locale] | default: contact_routes.en %}
+
+<section class="hero panel panel-glow">
+  <div class="hero-copy">
+    <p class="eyebrow"><span aria-hidden="true">01 //</span> {{ home.hero.eyebrow }}</p>
+    <h1>{{ home.hero.title_primary }}<br><span>{{ home.hero.title_accent }}</span></h1>
+    <p class="hero-coverage">{{ home.hero.coverage }}</p>
+    <p class="hero-lead">{{ home.hero.lead }}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ contact_url | relative_url }}">{{ home.hero.action }} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <aside class="system-card" aria-label="{{ home.hero.system_label | escape }}">
+    <div class="system-card-head">
+      <span>{{ home.hero.system_header }}</span>
+      <span class="terminal-cursor" aria-hidden="true"></span>
+    </div>
+    <div class="power-symbol" aria-hidden="true">⚡</div>
+    <p class="system-state">{{ home.hero.system_state }}</p>
+    <p>{{ home.hero.system_services }}<br>{{ home.hero.system_languages }}</p>
+  </aside>
+</section>
+
+<section id="services" class="section-block" aria-labelledby="services-title">
+  <div class="section-heading section-heading-row">
+    <div>
+      <p class="eyebrow"><span aria-hidden="true">02 //</span> {{ home.services.eyebrow }}</p>
+      <h2 id="services-title">{{ home.services.heading }}</h2>
+      <p class="section-intro">{{ home.services.intro }}</p>
+    </div>
+    <span class="section-note">{{ home.services.note }}</span>
+  </div>
+
+  <div class="services-grid">
+    {% for card in home.services.cards %}
+      <article class="service-card panel">
+        <span class="service-number">{{ card.number }}</span>
+        <h3>{{ card.title }}</h3>
+        <ul>
+          {% for item in card.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section-block" aria-labelledby="terms-title">
+  <article class="panel content-card">
+    <p class="eyebrow"><span aria-hidden="true">03 //</span> {{ home.terms.eyebrow }}</p>
+    <h2 id="terms-title">{{ home.terms.heading }}</h2>
+    <ul class="check-list">
+      {% for item in home.terms.items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>

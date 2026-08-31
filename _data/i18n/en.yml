@@ -1,3 +1,67 @@
+site:
+  skip_to_content: "Skip to content"
+  home_label: "TJ Electro home"
+  brand_subtitle: "Residential electrician"
+  navigation_label: "Main navigation"
+  language_switch_label: "View this page in Chinese"
+  language_switch_text: "中文"
+  footer_service: "Residential electrical services from Almere across the Netherlands."
+  registration: "TJ Electro · KvK 80477917"
+  copyright: "© 2026 TJ Electro"
+
+nav:
+  home: "Company"
+  portfolio: "Portfolio"
+  contact: "Contact"
+
+home:
+  hero:
+    eyebrow: "TJ Electro"
+    title_primary: "Your local electrician"
+    title_accent: "in Almere."
+    coverage: "Based in Almere · Contact me for projects across the Netherlands."
+    lead: "I provide reliable electrical installation, repairs and upgrades for homes — with clear communication in <strong>English</strong> and <strong>中文</strong>."
+    action: "Contact me"
+    system_label: "Service overview"
+    system_header: "INDEPENDENT / ALMERE"
+    system_state: "HOW I CAN HELP"
+    system_services: "Installation · Repairs · Upgrades"
+    system_languages: "English / 中文"
+  services:
+    eyebrow: "Company"
+    heading: "What I can help with"
+    intro: "I help homeowners with electrical installation, fault diagnosis and upgrades. I focus on clear communication, careful work and practical solutions."
+    note: "Residential · upgrade · diagnose"
+    cards:
+      - number: "01"
+        title: "Install & upgrade"
+        items:
+          - "Lighting and LED fixtures"
+          - "Sockets and switches"
+          - "Small renovation work"
+      - number: "02"
+        title: "Power & safety"
+        items:
+          - "Fault diagnosis"
+          - "Distribution board upgrades"
+          - "New circuits and groups"
+      - number: "03"
+        title: "Smart energy"
+        items:
+          - "EV charger installation"
+          - "Home battery systems"
+          - "Smart home and security"
+  terms:
+    eyebrow: "Service notes"
+    heading: "Terms at a glance"
+    items:
+      - "Quotes are based on the information provided and may change with site conditions."
+      - "Small works may be charged at an hourly rate."
+      - "Materials are charged separately unless stated otherwise."
+      - "Installation warranty: 12 months."
+      - "Product warranty follows the manufacturer."
+      - "Call-out or inspection may be charged when no work is carried out."
+
 portfolio:
   eyebrow: "Selected work"
   heading: "Portfolio"
@@ -6,7 +70,30 @@ portfolio:
   location_label: "Location"
   date_label: "Completed"
   empty:
+    visual_label: "IMG_QUEUE"
     eyebrow: "Archive status"
     heading: "Project archive"
     description: "Project photographs will be added here over time. In the meantime, feel free to get in touch with a description or photos of your own electrical project."
     action: "Discuss a project"
+
+contact:
+  eyebrow: "Direct contact"
+  heading: "Contact me"
+  intro: "Tell me briefly what you need and include a few clear photos or a short video if possible."
+  labels:
+    email: "Email"
+    phone: "Phone"
+    whatsapp: "WhatsApp"
+    wechat: "WeChat"
+  copy:
+    action: "Copy"
+    aria_label: "Copy WeChat ID"
+    success: "Copied"
+    error: "Copy failed"
+  wechat_qr_alt: "TJ Electro WeChat QR code"
+  aside:
+    eyebrow: "A quick note"
+    heading: "Photos help"
+    description: "A few clear photos or a short video help me understand the situation before I visit."
+    details_heading: "What to include"
+    details: "Your location, a short description and when you would like the work done."

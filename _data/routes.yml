@@ -1,0 +1,9 @@
+home:
+  en: "/"
+  zh: "/zh/"
+portfolio:
+  en: "/portfolio/"
+  zh: "/zh/portfolio/"
+contact:
+  en: "/contact/"
+  zh: "/zh/contact/"
