@@ -8,7 +8,9 @@
   <div class="hero-copy">
     <p class="eyebrow"><span aria-hidden="true">01 //</span> {{ home.hero.eyebrow }}</p>
     <h1>{{ home.hero.title_primary }}<br><span>{{ home.hero.title_accent }}</span></h1>
-    <p class="hero-coverage">{{ home.hero.coverage }}</p>
+    {% if home.hero.coverage != '' %}
+      <p class="hero-coverage">{{ home.hero.coverage }}</p>
+    {% endif %}
     <p class="hero-lead">{{ home.hero.lead }}</p>
     <div class="hero-actions">
       <a class="button button-primary" href="{{ contact_url | relative_url }}">{{ home.hero.action }} <span aria-hidden="true">→</span></a>
