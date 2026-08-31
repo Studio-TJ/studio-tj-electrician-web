@@ -12,9 +12,9 @@ projects:
         description: "A short description of the completed electrical work."
         alt: "A clear description of what is shown in the project photo"
       zh:
-        title: "项目名称"
-        description: "简单介绍这次完成的电气工作。"
-        alt: "准确描述项目照片中的内容"
+        title: "项目标题"
+        description: "简单说说这次做了哪些电气施工。"
+        alt: "用一句话说明项目照片里有什么"
       nl:
         title: "Projecttitel"
         description: "Een korte beschrijving van de uitgevoerde elektrotechnische werkzaamheden."
@@ -30,9 +30,9 @@ projects:
         description: "Upgraded the home's distribution board for a three-phase supply, with renewed protection and clearly labelled circuits."
         alt: "Upgraded three-phase residential distribution board with labelled circuit breakers in Eindhoven"
       zh:
-        title: "住宅三相配电箱升级"
-        description: "为住宅升级三相供电配电箱，更新保护装置并清晰标注各个回路。"
-        alt: "位于埃因霍温、带有清晰回路标识的住宅三相配电箱"
+        title: "三相配电箱升级"
+        description: "将住宅配电箱升级为三相供电，更新保护装置，并重新整理、标注各个回路。"
+        alt: "埃因霍温一套住宅内升级完成并标注好回路的三相配电箱"
   - id: "geldrop-zaptec-go-2-installation"
     published: true
     image: "/assets/images/portfolio/geldrop-zaptec-go-2-installation.webp"
@@ -44,9 +44,9 @@ projects:
         description: "Installed a wall-mounted Zaptec Go 2 EV charger with a clean surface-mounted cable route for convenient home charging."
         alt: "Black Zaptec Go 2 EV charger mounted on a brick exterior wall in Geldrop"
       zh:
-        title: "Zaptec Go 2 家用充电桩安装"
-        description: "在 Geldrop 为住宅安装壁挂式 Zaptec Go 2 电动汽车充电桩，并整齐布置明装供电线路。"
-        alt: "安装在 Geldrop 住宅外墙上的黑色 Zaptec Go 2 电动汽车充电桩"
+        title: "Zaptec Go 2 家用充电桩"
+        description: "在 Geldrop 的住宅外墙安装了一台 Zaptec Go 2 充电桩，供电线采用明装走线，整体简洁整齐。"
+        alt: "安装在 Geldrop 住宅砖墙上的黑色 Zaptec Go 2 充电桩"
   - id: "tilburg-plasterboard-double-socket-installation"
     published: true
     image: "/assets/images/portfolio/tilburg-plasterboard-double-socket-installation.webp"
@@ -58,6 +58,6 @@ projects:
         description: "Opened the plasterboard wall to extend the wiring and install a new double socket, ready for the wall to be finished."
         alt: "New double electrical socket installed in an opened plasterboard wall in Tilburg"
       zh:
-        title: "石膏板墙双联插座增设"
-        description: "在客户的石膏板墙内开孔延伸线路并增设双联插座，墙面随后可继续修补和饰面。"
-        alt: "蒂尔堡石膏板墙上新安装的双联插座及线路开孔"
+        title: "石膏板墙加装双联插座"
+        description: "在石膏板墙上开孔，将原有线路延伸后加装了一个双联插座，后续可以直接修补墙面。"
+        alt: "蒂尔堡一面石膏板墙上新装好的双联插座和线路开孔"

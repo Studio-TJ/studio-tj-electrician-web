@@ -454,7 +454,7 @@ main {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
@@ -833,7 +833,7 @@ a.contact-card:focus-visible {
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .service-card {
@@ -842,6 +842,10 @@ a.contact-card:focus-visible {
 }
 
 @media (max-width: 660px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
   .site-shell {
     width: min(100% - 24px, 1180px);
     margin-top: 12px;
