@@ -97,6 +97,14 @@ contact:
     success: "已复制"
     error: "复制失败"
   wechat_qr_alt: "TJ Electro 微信二维码"
+  wechat:
+    action: "点击显示二维码"
+    dialog_label: "微信联系方式"
+    heading: "添加微信"
+    instruction: "打开微信，扫描二维码添加我。"
+    id_label: "微信号"
+    qr_pending: "二维码待添加"
+    close_label: "关闭微信二维码"
   aside:
     eyebrow: "联系前的小提示"
     heading: "有照片会更好"

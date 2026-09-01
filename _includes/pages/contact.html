@@ -55,7 +55,13 @@
     {% endif %}
 
     {% if contact.wechat.id != '' %}
-      <div class="contact-card panel">
+      <button
+        class="contact-card contact-card-button panel"
+        type="button"
+        data-dialog-open="wechat-dialog"
+        aria-haspopup="dialog"
+        aria-controls="wechat-dialog"
+      >
         <span class="contact-icon" aria-hidden="true">
           <svg viewBox="0 0 16 16" focusable="false">
             <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.32.32 0 0 0-.12.366l.218.81a.6.6 0 0 1 .029.117.166.166 0 0 1-.162.162.2.2 0 0 1-.092-.03l-1.057-.61a.5.5 0 0 0-.256-.074.5.5 0 0 0-.142.021 5.7 5.7 0 0 1-1.576.22M9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.6.6 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.63.63 0 0 0 .098.356"/>
@@ -64,22 +70,52 @@
         </span>
         <span class="contact-copy">
           <small>{{ contact_strings.labels.wechat }}</small>
-          <strong>{{ contact.wechat.id }}</strong>
+          <strong>{{ contact_strings.wechat.action }}</strong>
         </span>
-        <button
-          class="copy-button"
-          type="button"
-          data-copy="{{ contact.wechat.id | escape }}"
-          data-copy-success="{{ contact_strings.copy.success | escape }}"
-          data-copy-error="{{ contact_strings.copy.error | escape }}"
-          aria-label="{{ contact_strings.copy.aria_label | escape }}"
-        >{{ contact_strings.copy.action }}</button>
-      </div>
-      {% if contact.wechat.qr_image != '' %}
-        <div class="wechat-qr panel">
-          <img src="{{ contact.wechat.qr_image | relative_url }}" alt="{{ contact_strings.wechat_qr_alt | escape }}">
+        <span class="contact-arrow" aria-hidden="true">↗</span>
+      </button>
+
+      <dialog
+        class="wechat-dialog"
+        id="wechat-dialog"
+        aria-label="{{ contact_strings.wechat.dialog_label | escape }}"
+      >
+        <div class="wechat-dialog-card panel">
+          <button
+            class="wechat-dialog-close"
+            type="button"
+            data-dialog-close
+            aria-label="{{ contact_strings.wechat.close_label | escape }}"
+          >×</button>
+
+          <p class="eyebrow">{{ contact_strings.labels.wechat }}</p>
+          <h2>{{ contact_strings.wechat.heading }}</h2>
+          <p class="wechat-dialog-instruction">{{ contact_strings.wechat.instruction }}</p>
+
+          <div class="wechat-qr">
+            {% if contact.wechat.qr_image != '' %}
+              <img src="{{ contact.wechat.qr_image | relative_url }}" alt="{{ contact_strings.wechat_qr_alt | escape }}">
+            {% else %}
+              <span>{{ contact_strings.wechat.qr_pending }}</span>
+            {% endif %}
+          </div>
+
+          <div class="wechat-id-row">
+            <span class="contact-copy">
+              <small>{{ contact_strings.wechat.id_label }}</small>
+              <strong>{{ contact.wechat.id }}</strong>
+            </span>
+            <button
+              class="copy-button"
+              type="button"
+              data-copy="{{ contact.wechat.id | escape }}"
+              data-copy-success="{{ contact_strings.copy.success | escape }}"
+              data-copy-error="{{ contact_strings.copy.error | escape }}"
+              aria-label="{{ contact_strings.copy.aria_label | escape }}"
+            >{{ contact_strings.copy.action }}</button>
+          </div>
         </div>
-      {% endif %}
+      </dialog>
     {% endif %}
   </div>
 

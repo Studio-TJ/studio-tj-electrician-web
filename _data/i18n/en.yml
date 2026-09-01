@@ -97,6 +97,14 @@ contact:
     success: "Copied"
     error: "Copy failed"
   wechat_qr_alt: "TJ Electro WeChat QR code"
+  wechat:
+    action: "View QR code"
+    dialog_label: "WeChat contact details"
+    heading: "Add me on WeChat"
+    instruction: "Open WeChat and scan the QR code to add me."
+    id_label: "WeChat ID"
+    qr_pending: "QR code to be added"
+    close_label: "Close WeChat QR code"
   aside:
     eyebrow: "A quick note"
     heading: "Photos help"
