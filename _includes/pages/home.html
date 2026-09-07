@@ -28,6 +28,15 @@
   </aside>
 </section>
 
+<aside class="qualifications-strip panel" aria-label="{{ home.qualifications.label | escape }}">
+  <span class="qualifications-label">{{ home.qualifications.label }}</span>
+  <ul class="qualifications-list">
+    {% for item in home.qualifications.items %}
+      <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+</aside>
+
 <section id="services" class="section-block" aria-labelledby="services-title">
   <div class="section-heading section-heading-row">
     <div>

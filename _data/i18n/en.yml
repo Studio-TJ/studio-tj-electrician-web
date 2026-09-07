@@ -27,6 +27,12 @@ home:
     system_state: "HOW I CAN HELP"
     system_services: "Installation · Repairs · Upgrades"
     system_languages: "English / 中文"
+  qualifications:
+    label: "Standards & Qualifications"
+    items:
+      - "NEN 1010"
+      - "NEN 3140 VP"
+      - "VOL-VCA"
   services:
     eyebrow: "Services"
     heading: "What I can help with"

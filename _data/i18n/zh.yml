@@ -27,6 +27,12 @@ home:
     system_state: "这些事情可以找我"
     system_services: "安装 · 检修 · 改造"
     system_languages: "中文 / 英语"
+  qualifications:
+    label: "标准与资质"
+    items:
+      - "NEN 1010"
+      - "NEN 3140 VP"
+      - "VOL-VCA"
   services:
     eyebrow: "服务范围"
     heading: "我可以提供的服务"
