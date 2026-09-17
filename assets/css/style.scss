@@ -485,81 +485,78 @@ html[lang="zh"] .hero h1 {
   color: var(--muted);
 }
 
-.pricing-summary {
+.pricing-intro {
+  max-width: 760px;
   margin-top: 1.8rem;
-  padding: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--muted);
+  font-size: clamp(1rem, 1.6vw, 1.16rem);
+}
+
+.pricing-table-wrap {
+  margin-top: 1.7rem;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-small);
-  background: rgba(202, 255, 86, 0.035);
 }
 
-.pricing-summary-copy {
-  max-width: 760px;
-}
-
-.pricing-summary-copy h3 {
-  margin-bottom: 0.65rem;
-  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
-}
-
-.pricing-summary-copy > p:last-child {
-  margin-bottom: 0;
-}
-
-.pricing-label {
-  margin-bottom: 0.65rem;
-  color: var(--accent-bright) !important;
-  font: 700 0.72rem/1.4 var(--mono);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.pricing-bands {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-}
-
-.pricing-bands > div {
-  padding: 1rem;
-  border: 1px solid var(--line-soft);
-  border-radius: 9px;
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
   background: rgba(5, 8, 5, 0.46);
 }
 
-.pricing-bands dt {
-  margin-bottom: 0.45rem;
+.pricing-table th,
+.pricing-table td {
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.pricing-table th {
   color: var(--faint);
-  font: 650 0.7rem/1.3 var(--mono);
-  letter-spacing: 0.045em;
+  background: rgba(202, 255, 86, 0.045);
+  font: 700 0.68rem/1.3 var(--mono);
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
-.pricing-bands dd {
-  margin: 0;
-  color: var(--accent-bright);
-  font: 800 clamp(1.05rem, 2vw, 1.35rem)/1.2 var(--mono);
+.pricing-table th:last-child,
+.pricing-table td:last-child {
+  text-align: right;
 }
 
-.pricing-notes {
+.pricing-table td:last-child {
+  color: var(--accent-bright);
+  font: 800 0.95rem/1.3 var(--mono);
+}
+
+.pricing-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.pricing-details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem 1.5rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--line-soft);
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.pricing-notes p {
+.pricing-details > div {
+  padding: 1.1rem;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-small);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.pricing-details h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+}
+
+.pricing-details p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.pricing-notes strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--text);
+  font-size: 0.9rem;
 }
 
 .service-number {
@@ -1053,9 +1050,13 @@ a.contact-card:focus-visible,
     grid-template-columns: 1fr;
   }
 
-  .pricing-bands,
-  .pricing-notes {
+  .pricing-details {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding-inline: 0.85rem;
   }
 
   .site-shell {

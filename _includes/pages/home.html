@@ -62,33 +62,48 @@
   </div>
 </section>
 
-<section class="section-block" aria-labelledby="terms-title">
+<section class="section-block" aria-labelledby="pricing-title">
   <article class="panel content-card">
-    <p class="eyebrow"><span aria-hidden="true">03 //</span> {{ home.terms.eyebrow }}</p>
-    <h2 id="terms-title">{{ home.terms.heading }}</h2>
+    <p class="eyebrow"><span aria-hidden="true">03 //</span> {{ home.pricing.eyebrow }}</p>
+    <h2 id="pricing-title">{{ home.pricing.heading }}</h2>
+    <p class="pricing-intro">{{ home.pricing.intro }}</p>
 
-    <div class="pricing-summary">
-      <div class="pricing-summary-copy">
-        <p class="pricing-label">{{ home.terms.pricing.label }}</p>
-        <h3>{{ home.terms.pricing.heading }}</h3>
-        <p>{{ home.terms.pricing.intro }}</p>
-      </div>
-
-      <dl class="pricing-bands">
-        {% for band in home.terms.pricing.bands %}
-          <div>
-            <dt>{{ band.distance }}</dt>
-            <dd>{{ band.price }}</dd>
-          </div>
-        {% endfor %}
-      </dl>
-
-      <div class="pricing-notes">
-        <p><strong>{{ home.terms.pricing.labour_label }}</strong>{{ home.terms.pricing.labour_note }}</p>
-        <p><strong>{{ home.terms.pricing.project_label }}</strong>{{ home.terms.pricing.project_note }}</p>
-      </div>
+    <div class="pricing-table-wrap">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th scope="col">{{ home.pricing.distance_label }}</th>
+            <th scope="col">{{ home.pricing.price_label }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for band in home.pricing.bands %}
+            <tr>
+              <td>{{ band.distance }}</td>
+              <td>{{ band.price }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
 
+    <div class="pricing-details">
+      <div>
+        <h3>{{ home.pricing.labour_label }}</h3>
+        <p>{{ home.pricing.labour_note }}</p>
+      </div>
+      <div>
+        <h3>{{ home.pricing.project_label }}</h3>
+        <p>{{ home.pricing.project_note }}</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="section-block" aria-labelledby="terms-title">
+  <article class="panel content-card">
+    <p class="eyebrow"><span aria-hidden="true">04 //</span> {{ home.terms.eyebrow }}</p>
+    <h2 id="terms-title">{{ home.terms.heading }}</h2>
     <ul class="check-list">
       {% for item in home.terms.items %}
         <li>{{ item }}</li>
