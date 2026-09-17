@@ -487,13 +487,51 @@ html[lang="zh"] .hero h1 {
 
 .pricing-intro {
   max-width: 760px;
-  margin-top: 1.8rem;
+  margin: 1.2rem 0 0;
   color: var(--muted);
   font-size: clamp(1rem, 1.6vw, 1.16rem);
 }
 
+.pricing-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pricing-option {
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-small);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.pricing-option-number {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  color: var(--accent);
+  font: 700 0.7rem/1 var(--mono);
+  letter-spacing: 0.08em;
+}
+
+.pricing-option h3 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+.pricing-option > p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.pricing-option h4 {
+  margin: 1.6rem 0 0.7rem;
+  color: var(--text);
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
+}
+
 .pricing-table-wrap {
-  margin-top: 1.7rem;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius-small);
@@ -534,29 +572,30 @@ html[lang="zh"] .hero h1 {
   border-bottom: 0;
 }
 
-.pricing-details {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+.pricing-labour-note {
   margin-top: 1rem;
-}
-
-.pricing-details > div {
   padding: 1.1rem;
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-small);
-  background: rgba(255, 255, 255, 0.018);
+  background: rgba(202, 255, 86, 0.035);
 }
 
-.pricing-details h3 {
-  margin-bottom: 0.45rem;
-  font-size: 1rem;
+.pricing-labour-note strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--text);
 }
 
-.pricing-details p {
+.pricing-labour-note p {
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.pricing-option-project {
+  background:
+    linear-gradient(145deg, rgba(202, 255, 86, 0.045), transparent 72%),
+    rgba(255, 255, 255, 0.018);
 }
 
 .service-number {
@@ -1047,10 +1086,6 @@ a.contact-card:focus-visible,
   }
 
   .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-details {
     grid-template-columns: 1fr;
   }
 

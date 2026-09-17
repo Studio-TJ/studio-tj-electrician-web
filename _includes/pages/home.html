@@ -68,34 +68,43 @@
     <h2 id="pricing-title">{{ home.pricing.heading }}</h2>
     <p class="pricing-intro">{{ home.pricing.intro }}</p>
 
-    <div class="pricing-table-wrap">
-      <table class="pricing-table">
-        <thead>
-          <tr>
-            <th scope="col">{{ home.pricing.distance_label }}</th>
-            <th scope="col">{{ home.pricing.price_label }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for band in home.pricing.bands %}
-            <tr>
-              <td>{{ band.distance }}</td>
-              <td>{{ band.price }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+    <div class="pricing-options">
+      <section class="pricing-option pricing-option-time" aria-labelledby="time-based-title">
+        <span class="pricing-option-number">{{ home.pricing.time_based.number }}</span>
+        <h3 id="time-based-title">{{ home.pricing.time_based.heading }}</h3>
+        <p>{{ home.pricing.time_based.intro }}</p>
 
-    <div class="pricing-details">
-      <div>
-        <h3>{{ home.pricing.labour_label }}</h3>
-        <p>{{ home.pricing.labour_note }}</p>
-      </div>
-      <div>
-        <h3>{{ home.pricing.project_label }}</h3>
-        <p>{{ home.pricing.project_note }}</p>
-      </div>
+        <h4>{{ home.pricing.time_based.callout_heading }}</h4>
+        <div class="pricing-table-wrap">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th scope="col">{{ home.pricing.time_based.distance_label }}</th>
+                <th scope="col">{{ home.pricing.time_based.price_label }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for band in home.pricing.time_based.bands %}
+                <tr>
+                  <td>{{ band.distance }}</td>
+                  <td>{{ band.price }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pricing-labour-note">
+          <strong>{{ home.pricing.time_based.labour_label }}</strong>
+          <p>{{ home.pricing.time_based.labour_note }}</p>
+        </div>
+      </section>
+
+      <section class="pricing-option pricing-option-project" aria-labelledby="project-based-title">
+        <span class="pricing-option-number">{{ home.pricing.project_based.number }}</span>
+        <h3 id="project-based-title">{{ home.pricing.project_based.heading }}</h3>
+        <p>{{ home.pricing.project_based.intro }}</p>
+      </section>
     </div>
   </article>
 </section>
