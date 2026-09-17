@@ -66,6 +66,29 @@
   <article class="panel content-card">
     <p class="eyebrow"><span aria-hidden="true">03 //</span> {{ home.terms.eyebrow }}</p>
     <h2 id="terms-title">{{ home.terms.heading }}</h2>
+
+    <div class="pricing-summary">
+      <div class="pricing-summary-copy">
+        <p class="pricing-label">{{ home.terms.pricing.label }}</p>
+        <h3>{{ home.terms.pricing.heading }}</h3>
+        <p>{{ home.terms.pricing.intro }}</p>
+      </div>
+
+      <dl class="pricing-bands">
+        {% for band in home.terms.pricing.bands %}
+          <div>
+            <dt>{{ band.distance }}</dt>
+            <dd>{{ band.price }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+
+      <div class="pricing-notes">
+        <p><strong>{{ home.terms.pricing.labour_label }}</strong>{{ home.terms.pricing.labour_note }}</p>
+        <p><strong>{{ home.terms.pricing.project_label }}</strong>{{ home.terms.pricing.project_note }}</p>
+      </div>
+    </div>
+
     <ul class="check-list">
       {% for item in home.terms.items %}
         <li>{{ item }}</li>
