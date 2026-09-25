@@ -12,14 +12,9 @@
         >
       </div>
       <div class="portfolio-card-copy">
-        {% if project.location or project.date %}
+        {% if project.location %}
           <div class="portfolio-meta">
-            {% if project.location %}
-              <span>{{ include.strings.location_label }} // {{ project.location | escape }}</span>
-            {% endif %}
-            {% if project.date %}
-              <time datetime="{{ project.date }}">{{ include.strings.date_label }} // {{ project.date }}</time>
-            {% endif %}
+            <span>{{ include.strings.location_label }} // {{ project.location | escape }}</span>
           </div>
         {% endif %}
         <h2>{{ project_text.title | escape }}</h2>
