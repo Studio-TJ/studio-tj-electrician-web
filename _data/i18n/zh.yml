@@ -89,6 +89,8 @@ home:
           price: "具体沟通"
       labour_label: "超过前 30 分钟后"
       labour_note: "按 €84.70/小时计费，每 15 分钟为一个计费单位；材料费另计。"
+      emergency_label: "紧急服务附加费"
+      emergency_note: "紧急上门服务加收 50% 费用。"
     project_based:
       number: "02"
       heading: "项目报价"

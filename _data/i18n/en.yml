@@ -89,6 +89,8 @@ home:
           price: "Contact me"
       labour_label: "After the first 30 minutes"
       labour_note: "Labour is charged at €84.70 per hour in 15-minute increments. Materials are charged separately."
+      emergency_label: "Emergency surcharge"
+      emergency_note: "Emergency call-outs are subject to a 50% surcharge."
     project_based:
       number: "02"
       heading: "Project-based work"
