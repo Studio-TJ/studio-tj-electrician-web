@@ -1,4 +1,11 @@
-# ⚡ TJ Electro  
+# ⚡ TJ Electro
+
+[简体中文](README_zh.md)
+
+Repository documentation is maintained in English and Simplified Chinese. The
+English file is the sole source of truth. Chinese translations use the `_zh`
+suffix and are updated in the same change.
+
 ### Your English & Chinese speaking electrician in Almere
 
 ---
@@ -71,11 +78,11 @@ before publishing them.
 
 ### Project entry
 
-Edit the starter entry in `_data/portfolio.yml` for the first project. For later
-projects, copy that entire entry and add it below the previous one. Keep
-`published: false` while preparing it; change it to `true` when the image and
-English text are ready. Chinese and Dutch text can be added later. Missing
-translations automatically fall back to English.
+Use the starter entry in `_data/portfolio.yml` as a template and append the new
+entry in the desired display order. Keep `published: false` while preparing it.
+Set it to `true` when the image and the title, description, and alt text in all
+three languages are ready. If an entire project translation is missing, its
+card falls back to English.
 
 ```yaml
 - id: "distribution-board-01"
@@ -88,17 +95,30 @@ translations automatically fall back to English.
       title: "Distribution board upgrade"
       description: "Replacement and rewiring of an outdated distribution board."
       alt: "Completed residential distribution board upgrade"
+    zh:
+      title: "配电箱升级"
+      description: "更换老旧配电箱并重新接线。"
+      alt: "升级完成的住宅配电箱"
+    nl:
+      title: "Groepenkast vernieuwd"
+      description: "Een verouderde groepenkast vervangen en opnieuw bedraad."
+      alt: "Vernieuwde groepenkast in een woning"
 ```
 
 ---
 
-## Translations
+## Website translations
 
-Shared website text lives in `_data/i18n/en.yml` and `_data/i18n/zh.yml`.
-English uses the existing root URLs; Chinese uses the matching `/zh/` URLs.
-The language switcher uses `_data/routes.yml` to move between the same page in
-both languages. When adding a visible interface string, add the same key to both
-language files. Portfolio project translations remain in `_data/portfolio.yml`.
+The website is available in English at `/`, Simplified Chinese at `/zh/`, and
+Dutch at `/nl/`. Each language has a home, portfolio, and contact page. The
+language switcher uses `_data/routes.yml` to link to the same page in the other
+languages.
+
+Maintain all three languages in every website change. Update shared copy in
+`_data/i18n/en.yml`, `_data/i18n/zh.yml`, and `_data/i18n/nl.yml`, with matching
+keys. Update page titles and descriptions in the corresponding entry points.
+Keep portfolio translations together in `_data/portfolio.yml`. Verify the
+three page versions and their language links before publishing.
 
 ---
 

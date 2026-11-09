@@ -1,9 +1,12 @@
 home:
   en: "/"
   zh: "/zh/"
+  nl: "/nl/"
 portfolio:
   en: "/portfolio/"
   zh: "/zh/portfolio/"
+  nl: "/nl/portfolio/"
 contact:
   en: "/contact/"
   zh: "/zh/contact/"
+  nl: "/nl/contact/"

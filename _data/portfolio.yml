@@ -33,6 +33,10 @@ projects:
         title: "三相配电箱升级"
         description: "将住宅配电箱升级为三相供电，更新保护装置，并重新整理、标注各个回路。"
         alt: "埃因霍温一套住宅内升级完成并标注好回路的三相配电箱"
+      nl:
+        title: "Groepenkast omgebouwd voor drie fasen"
+        description: "De groepenkast aangepast voor een driefasenaansluiting, met vernieuwde beveiliging en duidelijk gemarkeerde groepen."
+        alt: "Vernieuwde driefasengroepenkast met gelabelde installatieautomaten in een woning in Eindhoven"
   - id: "geldrop-zaptec-go-2-installation"
     published: true
     image: "/assets/images/portfolio/geldrop-zaptec-go-2-installation.webp"
@@ -47,6 +51,10 @@ projects:
         title: "Zaptec Go 2 家用充电桩"
         description: "在 Geldrop 的住宅外墙安装了一台 Zaptec Go 2 充电桩，供电线采用明装走线，整体简洁整齐。"
         alt: "安装在 Geldrop 住宅砖墙上的黑色 Zaptec Go 2 充电桩"
+      nl:
+        title: "Zaptec Go 2-laadpunt geïnstalleerd"
+        description: "Een Zaptec Go 2 aan de buitenmuur gemonteerd, met een netjes aangelegde opbouwkabel voor thuisladen."
+        alt: "Zwart Zaptec Go 2-laadpunt aan een bakstenen buitenmuur in Geldrop"
   - id: "tilburg-plasterboard-double-socket-installation"
     published: true
     image: "/assets/images/portfolio/tilburg-plasterboard-double-socket-installation.webp"
@@ -61,3 +69,7 @@ projects:
         title: "石膏板墙加装双联插座"
         description: "在石膏板墙上开孔，将原有线路延伸后加装了一个双联插座，后续可以直接修补墙面。"
         alt: "蒂尔堡一面石膏板墙上新装好的双联插座和线路开孔"
+      nl:
+        title: "Extra dubbel stopcontact geplaatst"
+        description: "De gipsplaatwand geopend, de bestaande bedrading verlengd en een nieuw dubbel stopcontact geplaatst. De wand is klaar voor afwerking."
+        alt: "Nieuw dubbel stopcontact in een geopende gipsplaatwand in een woning in Tilburg"

@@ -1,12 +1,150 @@
+site:
+  skip_to_content: "Naar de inhoud"
+  home_label: "TJ Electro startpagina"
+  brand_subtitle: "Elektricien voor woningen"
+  navigation_label: "Hoofdnavigatie"
+  language_switch_label: "Paginataal"
+  footer_service: "Elektrotechnisch werk voor woningen in heel Nederland, vanuit Almere."
+  registration: "TJ Electro · KvK 80477917"
+  copyright: "© 2026 TJ Electro"
+
+nav:
+  home: "Diensten"
+  portfolio: "Projecten"
+  contact: "Contact"
+
+home:
+  hero:
+    eyebrow: "TJ Electro"
+    title_primary: "Uw elektricien"
+    title_accent: "in Almere."
+    coverage: "Gevestigd in Almere · Neem contact op voor projecten in heel Nederland."
+    lead: "Ik werk vooral aan elektrische installaties, reparaties en aanpassingen in woningen en installeer ook thuisbatterijen en laadpalen. Zakelijk elektrotechnisch werk is bespreekbaar, afhankelijk van de omvang en aard van de klus. U kunt met mij communiceren in het <strong>Engels</strong> of <strong>Chinees</strong>."
+    action: "Neem contact op"
+    system_label: "Overzicht van diensten"
+    system_header: "ELEKTRICIEN / ALMERE"
+    system_state: "WAARMEE IK KAN HELPEN"
+    system_services: "Installatie · Reparatie · Aanpassing"
+    system_languages: "Engels / Chinees"
+  qualifications:
+    label: "Normen en kwalificaties"
+    items:
+      - "NEN 1010"
+      - "NEN 3140 VP"
+      - "VOL-VCA"
+  services:
+    eyebrow: "Diensten"
+    heading: "Waarmee ik kan helpen"
+    intro: "Ik richt me op woningen, van reparaties en aanpassingen aan de elektrische installatie tot groepenkasten en energiesystemen voor thuis. Zakelijke projecten zijn per geval bespreekbaar."
+    note: "Woningen · energie voor thuis · zakelijke aanvragen"
+    cards:
+      - number: "01"
+        title: "Installatie en renovatie"
+        items:
+          - "Verlichting en ledarmaturen"
+          - "Stopcontacten en schakelaars plaatsen of vervangen"
+          - "Kleine elektrotechnische renovatiewerkzaamheden"
+      - number: "02"
+        title: "Groepen en veiligheid"
+        items:
+          - "Storingen opsporen"
+          - "Groepenkasten vervangen of uitbreiden"
+          - "Nieuwe bedrading en groepen aanleggen"
+      - number: "03"
+        title: "Thuisbatterijen en laadpalen"
+        items:
+          - "Thuisbatterijen installeren"
+          - "Energieopslagsystemen installeren of uitbreiden"
+          - "Laadpalen voor thuis installeren"
+      - number: "04"
+        title: "Domotica en beveiliging"
+        items:
+          - "Slimme apparaten voor thuis installeren"
+          - "Deurbellen, camera's en beveiligingsapparatuur"
+          - "Sensoren en automatiseringssystemen"
+  pricing:
+    eyebrow: "Tarieven"
+    heading: "Tarieven"
+    intro: "Afhankelijk van de omvang en aard van de klus werk ik op uurbasis of maak ik een offerte voor het hele project. Alle onderstaande prijzen zijn inclusief btw."
+    time_based:
+      number: "01"
+      heading: "Werk op uurbasis"
+      intro: "Voor het opsporen van storingen, reparaties en kleinere klussen. Het starttarief hangt af van de enkele rijafstand vanaf Almere en is inclusief de eerste 30 minuten arbeid."
+      callout_heading: "Starttarieven"
+      distance_label: "Enkele rijafstand"
+      price_label: "Prijs incl. btw"
+      bands:
+        - distance: "0–10 km"
+          price: "€ 121,00"
+        - distance: "10–25 km"
+          price: "€ 139,15"
+        - distance: "25–50 km"
+          price: "€ 169,40"
+        - distance: "50–75 km"
+          price: "€ 199,65"
+        - distance: "75–100 km"
+          price: "€ 229,90"
+        - distance: "Meer dan 100 km"
+          price: "Neem contact op"
+      labour_label: "Na de eerste 30 minuten"
+      labour_note: "Het uurtarief bedraagt € 84,70. Ik reken af per kwartier. Materialen worden apart in rekening gebracht."
+      emergency_label: "Spoedtoeslag"
+      emergency_note: "Voor spoedbezoeken geldt een toeslag van 50%."
+    project_based:
+      number: "02"
+      heading: "Werk op projectbasis"
+      intro: "Voor grotere klussen met een duidelijk afgebakende omvang maak ik een volledige offerte op basis van de situatie ter plaatse, de werkzaamheden en de benodigde materialen."
+  terms:
+    eyebrow: "Goed om te weten"
+    heading: "Voorwaarden in het kort"
+    items:
+      - "Offertes zijn gebaseerd op de verstrekte informatie en kunnen veranderen door de situatie ter plaatse."
+      - "Kleine reparaties en klussen worden op uurbasis berekend. Voor grotere klussen met een duidelijk afgebakende omvang geldt een projectprijs."
+      - "Materialen worden apart in rekening gebracht, tenzij anders vermeld."
+      - "U krijgt 12 maanden garantie op de installatie."
+      - "Voor producten geldt de garantie van de fabrikant."
+      - "Als er na een bezoek geen werkzaamheden worden uitgevoerd, breng ik het geldende start- of inspectietarief in rekening."
+
 portfolio:
-  eyebrow: "Geselecteerd werk"
+  eyebrow: "Uitgelicht werk"
   heading: "Projecten"
   intro: "Een selectie van afgeronde elektrotechnische projecten en installatiedetails."
   grid_label: "Afgeronde elektrotechnische projecten"
   location_label: "Locatie"
   date_label: "Uitgevoerd"
   empty:
+    visual_label: "FOTOARCHIEF"
     eyebrow: "Archiefstatus"
     heading: "Projectarchief"
-    description: "Projectfoto's worden hier geleidelijk toegevoegd. Neem gerust contact op met een omschrijving of foto's van uw eigen project."
+    description: "Ik voeg hier gaandeweg foto's van projecten toe. Neem gerust contact op met een beschrijving of foto's van uw eigen project."
     action: "Bespreek een project"
+
+contact:
+  eyebrow: "Rechtstreeks contact"
+  heading: "Neem contact op"
+  intro: "Vertel kort waarmee ik u kan helpen en stuur zo mogelijk een paar duidelijke foto's of een korte video mee."
+  labels:
+    email: "E-mail"
+    phone: "Telefoon"
+    whatsapp: "WhatsApp"
+    wechat: "WeChat"
+  copy:
+    action: "Kopiëren"
+    aria_label: "WeChat-ID kopiëren"
+    success: "Gekopieerd"
+    error: "Kopiëren mislukt"
+  wechat_qr_alt: "WeChat-QR-code van TJ Electro"
+  wechat:
+    action: "QR-code bekijken"
+    dialog_label: "Contactgegevens voor WeChat"
+    heading: "Voeg mij toe op WeChat"
+    instruction: "Open WeChat en scan de QR-code om mij toe te voegen."
+    id_label: "WeChat-ID"
+    qr_pending: "De QR-code volgt nog"
+    close_label: "WeChat-QR-code sluiten"
+  aside:
+    eyebrow: "Voor uw aanvraag"
+    heading: "Foto's helpen"
+    description: "Met een paar duidelijke foto's of een korte video kan ik de situatie al voor mijn bezoek beter inschatten."
+    details_heading: "Wat ik graag van u hoor"
+    details: "Uw locatie, een korte beschrijving van de klus en wanneer u het werk wilt laten uitvoeren."

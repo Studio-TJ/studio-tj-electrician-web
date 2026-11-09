@@ -17,7 +17,11 @@ locales:
     path_prefix: "/zh"
   nl:
     label: "Nederlands"
-    enabled: false
+    enabled: true
     path_prefix: "/nl"
 url: "https://electro.studiotj.cc"
 baseurl: ""
+exclude:
+  - AGENTS.md
+  - AGENTS_zh.md
+  - README_zh.md

@@ -201,11 +201,15 @@ h3 {
   background: rgba(202, 255, 86, 0.09);
 }
 
+.language-links {
+  display: flex;
+  gap: 0.35rem;
+}
+
 .language-switch {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.42rem;
   min-height: 42px;
   padding: 0.58rem 0.78rem;
   color: var(--accent-bright);
@@ -223,16 +227,6 @@ h3 {
   color: var(--accent);
   border-color: rgba(202, 255, 86, 0.38);
   background: rgba(202, 255, 86, 0.1);
-}
-
-.language-switch svg {
-  width: 15px;
-  height: 15px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.15;
 }
 
 main {
@@ -1075,6 +1069,37 @@ a.contact-card:focus-visible,
   }
 }
 
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-block: 22px 26px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .site-nav {
+    flex: 1 0 auto;
+  }
+
+  .site-nav a {
+    flex: 1;
+    padding-inline: 0.65rem;
+    text-align: center;
+  }
+
+  .language-switch {
+    flex: 0 0 auto;
+    min-width: 54px;
+    padding-inline: 0.7rem;
+  }
+}
+
 @media (max-width: 660px) {
   .qualifications-strip {
     align-items: flex-start;
@@ -1097,36 +1122,6 @@ a.contact-card:focus-visible,
   .site-shell {
     width: min(100% - 24px, 1180px);
     margin-top: 12px;
-  }
-
-  .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.25rem;
-    padding-block: 22px 26px;
-  }
-
-  .header-actions {
-    width: 100%;
-    gap: 0.5rem;
-  }
-
-  .site-nav {
-    flex: 1;
-    min-width: 0;
-    width: auto;
-  }
-
-  .site-nav a {
-    flex: 1;
-    padding-inline: 0.65rem;
-    text-align: center;
-  }
-
-  .language-switch {
-    flex: 0 0 auto;
-    min-width: 54px;
-    padding-inline: 0.7rem;
   }
 
   .hero {
