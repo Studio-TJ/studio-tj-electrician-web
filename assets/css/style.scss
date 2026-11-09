@@ -206,7 +206,7 @@ h3 {
   margin-inline-start: auto;
 }
 
-.language-switch {
+summary.language-switch {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -225,11 +225,11 @@ h3 {
   transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
-.language-switch::-webkit-details-marker {
+summary.language-switch::-webkit-details-marker {
   display: none;
 }
 
-.language-switch::after {
+summary.language-switch::after {
   width: 6px;
   height: 6px;
   border-right: 1px solid currentColor;
@@ -238,13 +238,13 @@ h3 {
   transform: translateY(-2px) rotate(45deg);
 }
 
-.language-picker[open] .language-switch::after {
+.language-picker[open] summary.language-switch::after {
   transform: translateY(2px) rotate(225deg);
 }
 
-.language-switch:hover,
-.language-switch:focus-visible,
-.language-picker[open] .language-switch {
+summary.language-switch:hover,
+summary.language-switch:focus-visible,
+.language-picker[open] summary.language-switch {
   color: var(--accent);
   border-color: rgba(202, 255, 86, 0.38);
   background: rgba(202, 255, 86, 0.1);
@@ -279,6 +279,13 @@ h3 {
 .language-options [aria-current] {
   color: var(--accent-bright);
   background: rgba(202, 255, 86, 0.09);
+}
+
+.brand-copy small:lang(zh),
+.site-nav a:lang(zh),
+summary.language-switch:lang(zh),
+.language-options > :lang(zh) {
+  font-family: var(--sans);
 }
 
 main {
