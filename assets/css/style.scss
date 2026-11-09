@@ -201,15 +201,16 @@ h3 {
   background: rgba(202, 255, 86, 0.09);
 }
 
-.language-links {
-  display: flex;
-  gap: 0.35rem;
+.language-picker {
+  position: relative;
+  margin-inline-start: auto;
 }
 
 .language-switch {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.65rem;
   min-height: 42px;
   padding: 0.58rem 0.78rem;
   color: var(--accent-bright);
@@ -218,15 +219,66 @@ h3 {
   background: rgba(202, 255, 86, 0.045);
   font: 750 0.72rem/1 var(--mono);
   letter-spacing: 0.04em;
-  text-decoration: none;
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
   transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
+.language-switch::-webkit-details-marker {
+  display: none;
+}
+
+.language-switch::after {
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  content: "";
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.language-picker[open] .language-switch::after {
+  transform: translateY(2px) rotate(225deg);
+}
+
 .language-switch:hover,
-.language-switch:focus-visible {
+.language-switch:focus-visible,
+.language-picker[open] .language-switch {
   color: var(--accent);
   border-color: rgba(202, 255, 86, 0.38);
   background: rgba(202, 255, 86, 0.1);
+}
+
+.language-options {
+  position: absolute;
+  z-index: 2;
+  inset-block-start: calc(100% + 0.4rem);
+  inset-inline-end: 0;
+  display: grid;
+  min-width: 9rem;
+  padding: 0.3rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  background: var(--panel-strong);
+  box-shadow: var(--shadow);
+  font: 700 0.75rem/1.2 var(--mono);
+}
+
+.language-options > * {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.language-options a:hover,
+.language-options a:focus-visible,
+.language-options [aria-current] {
+  color: var(--accent-bright);
+  background: rgba(202, 255, 86, 0.09);
 }
 
 main {
@@ -1091,12 +1143,6 @@ a.contact-card:focus-visible,
     flex: 1;
     padding-inline: 0.65rem;
     text-align: center;
-  }
-
-  .language-switch {
-    flex: 0 0 auto;
-    min-width: 54px;
-    padding-inline: 0.7rem;
   }
 }
 

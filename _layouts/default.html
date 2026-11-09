@@ -49,6 +49,9 @@
     <meta name="twitter:description" content="{{ document_description | escape }}">
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% if current_routes %}
+      <script src="{{ '/assets/js/language-picker.js' | relative_url }}" defer></script>
+    {% endif %}
   </head>
 
   <body>
@@ -72,16 +75,26 @@
           </nav>
 
           {% if current_routes %}
-            <nav class="language-links" aria-label="{{ strings.site.language_switch_label | escape }}">
-              {% for locale_entry in site.locales %}
-                {% assign alternate_locale = locale_entry[0] %}
-                {% assign alternate_config = locale_entry[1] %}
-                {% assign alternate_url = current_routes[alternate_locale] %}
-                {% if alternate_config.enabled and alternate_url and alternate_locale != locale %}
-                  <a class="language-switch" href="{{ alternate_url | relative_url }}" hreflang="{{ alternate_locale }}" lang="{{ alternate_locale }}">{{ alternate_config.label | escape }}</a>
-                {% endif %}
-              {% endfor %}
-            </nav>
+            {% assign current_language = site.locales[locale].label %}
+            <details class="language-picker">
+              <summary class="language-switch" aria-label="{{ strings.site.language_switch_label | escape }}: {{ current_language | escape }}">
+                {{ current_language | escape }}
+              </summary>
+              <nav class="language-options" aria-label="{{ strings.site.language_switch_label | escape }}">
+                {% for locale_entry in site.locales %}
+                  {% assign alternate_locale = locale_entry[0] %}
+                  {% assign alternate_config = locale_entry[1] %}
+                  {% assign alternate_url = current_routes[alternate_locale] %}
+                  {% if alternate_config.enabled and alternate_url %}
+                    {% if alternate_locale == locale %}
+                      <span aria-current="true">{{ alternate_config.label | escape }}</span>
+                    {% else %}
+                      <a href="{{ alternate_url | relative_url }}" hreflang="{{ alternate_locale }}" lang="{{ alternate_locale }}">{{ alternate_config.label | escape }}</a>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              </nav>
+            </details>
           {% endif %}
         </div>
       </header>
