@@ -1,0 +1,46 @@
+{% assign enquiry = contact_strings.enquiry %}
+<section class="panel content-card enquiry-card" id="enquiry" aria-labelledby="enquiry-title">
+  <h2 id="enquiry-title">{{ enquiry.heading }}</h2>
+  <form
+    id="enquiry-form"
+    action="https://submit-form.com/{{ site.formspark_form_id }}"
+    method="post"
+    data-pending="{{ enquiry.pending | escape }}"
+    data-success="{{ enquiry.success | escape }}"
+    data-error="{{ enquiry.error | escape }}"
+  >
+    <input type="hidden" name="language" value="{{ locale }}">
+    <input type="hidden" name="_append" value="false">
+    <input type="checkbox" name="_honeypot" hidden tabindex="-1" autocomplete="off">
+
+    <fieldset class="enquiry-fields" aria-labelledby="enquiry-title">
+      <label for="enquiry-name">
+        {{ enquiry.name }}
+        <input id="enquiry-name" name="name" autocomplete="name" maxlength="120" required>
+      </label>
+      <label for="enquiry-email">
+        {{ enquiry.email }}
+        <input id="enquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      </label>
+      <label for="enquiry-location">
+        {{ enquiry.location }}
+        <input id="enquiry-location" name="location" maxlength="120" required>
+      </label>
+      <label for="enquiry-message">
+        {{ enquiry.message }}
+        <textarea id="enquiry-message" name="message" rows="5" maxlength="3000" required></textarea>
+      </label>
+      <p class="enquiry-note">{{ enquiry.notice }} <a href="#enquiry-privacy">{{ enquiry.privacy_link }}</a></p>
+      <button type="submit" class="button button-primary">{{ enquiry.submit }}</button>
+    </fieldset>
+    <p class="enquiry-status" role="status"></p>
+  </form>
+
+  <details id="enquiry-privacy" class="enquiry-privacy">
+    <summary>{{ enquiry.privacy.heading }}</summary>
+    <p>{{ enquiry.privacy.purpose }}</p>
+    <p>{{ enquiry.privacy.providers }} <a href="https://formspark.io/legal/privacy-policy/">{{ enquiry.privacy.formspark_link }}</a></p>
+    <p>{{ enquiry.privacy.retention }}</p>
+    <p>{{ enquiry.privacy.rights }} <a href="mailto:{{ contact.email.address }}">{{ contact.email.address }}</a>. <a href="https://autoriteitpersoonsgegevens.nl/klacht">{{ enquiry.privacy.authority }}</a></p>
+  </details>
+</section>

@@ -21,6 +21,7 @@ locales:
     path_prefix: "/nl"
 url: "https://electro.studiotj.cc"
 baseurl: ""
+formspark_form_id: "feCs7Xlf2"
 exclude:
   - AGENTS.md
   - AGENTS_zh.md

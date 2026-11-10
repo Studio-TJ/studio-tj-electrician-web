@@ -10,6 +10,8 @@
 </section>
 
 <section class="contact-layout">
+  {% include pages/contact-enquiry.html %}
+
   <div class="contact-list">
     <a class="contact-card panel" href="mailto:{{ contact.email.address }}">
       <span class="contact-icon" aria-hidden="true">
@@ -117,18 +119,17 @@
         </div>
       </dialog>
     {% endif %}
+    <aside class="panel contact-aside">
+      <div class="signal" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="eyebrow">{{ contact_strings.aside.eyebrow }}</p>
+      <h2>{{ contact_strings.aside.heading }}</h2>
+      <p>{{ contact_strings.aside.description }}</p>
+      <div class="response-note">
+        <span aria-hidden="true">⚡</span>
+        <p><strong>{{ contact_strings.aside.details_heading }}</strong><br>{{ contact_strings.aside.details }}</p>
+      </div>
+    </aside>
   </div>
-
-  <aside class="panel contact-aside">
-    <div class="signal" aria-hidden="true"><span></span><span></span><span></span></div>
-    <p class="eyebrow">{{ contact_strings.aside.eyebrow }}</p>
-    <h2>{{ contact_strings.aside.heading }}</h2>
-    <p>{{ contact_strings.aside.description }}</p>
-    <div class="response-note">
-      <span aria-hidden="true">⚡</span>
-      <p><strong>{{ contact_strings.aside.details_heading }}</strong><br>{{ contact_strings.aside.details }}</p>
-    </div>
-  </aside>
 </section>
 
-<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/contact.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
